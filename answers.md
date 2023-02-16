@@ -1,4 +1,4 @@
-## 1) We have a k8s cluster in amazon. We need to deploy a new version of my application hub.test.io/app_v1.17b. To minimize possible downtime i select blue-green scheme. Pls describe a deployments example with tag selection.
+## 1) We have a k8s cluster in amazon. We need to deploy a new version of my application `hub.test.io/app_v1.17b`. To minimize possible downtime i select blue-green scheme. Pls describe a deployments example with tag selection.
 
 I will consider the app in the task to be very simple because there are no other details about it. Also, I suppose the task is not about the green-blue deployment strategy. And we will assume that there is an ingress balancer that redirects the app’s traffic on the service with “name: app” label.
 
@@ -64,24 +64,24 @@ CMD ["run", "prod"]
 The dockerfile describes an app’s building inside a docker container
 
 ```
-/# it takes ubuntu environment from the image
+# it takes ubuntu environment from the image
 
 FROM ubuntu:18.04 
 
-/# copies source code in the container
+# copies source code in the container
 COPY ./src /app 
 
-/#  updates repos for the packets installing
+#  updates repos for the packets installing
 RUN apt-get update -y
 RUN apt-get install -y nodejs
 
-/# there is a mistake - “npm” should be. This command installs a package and any packages that it depends on
+# there is a mistake - “npm” should be. This command installs a package and any packages that it depends on
 RUN np_m install
 
-/# The command will start with init of the container. I think should be “node” here
+# The command will start with init of the container. I think should be “node” here
 ENTRYPOINT ["npm"] 
 
-/# default arguments for the entrypoint. “Run” is redundant here I think
+# default arguments for the entrypoint. “Run” is redundant here I think
 CMD ["run", "prod"]
 ```
 
