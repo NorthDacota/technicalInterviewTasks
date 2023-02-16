@@ -1,4 +1,5 @@
-Readme
+###Task:
+Detect locally mounted disk (make sure it is local) with at least X MB free space, create Z files of size Y, run Z “dd” processes where each process will fill the selected file with Data and print the time it took to complete the work.
 
 Requirements:
 * Only for unix OS ( I was testing only on ubuntu 20.04 )
@@ -24,6 +25,3 @@ Options:
 
 --fill-from
  Specify source of data for dd command
-
-**Task**:
-Detect locally mounted disk (make sure it is local) with at least X MB free space, create Z files of size Y, run Z “dd” processes where each process will fill the selected file with Data and print the time it took to complete the work.
