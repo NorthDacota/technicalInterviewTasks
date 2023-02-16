@@ -1,0 +1,6 @@
+## Plese write a list of hosts here in format one line = one host
+## Make shure you describe the ssh hosts below in ./ssh/config 
+## or specify user here for each host. 
+## Format:
+#hostname
+#user@hostname  
