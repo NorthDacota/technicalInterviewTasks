@@ -1,4 +1,4 @@
-###Task:
+### Task:
 Detect locally mounted disk (make sure it is local) with at least X MB free space, create Z files of size Y, run Z “dd” processes where each process will fill the selected file with Data and print the time it took to complete the work.
 
 Requirements:
